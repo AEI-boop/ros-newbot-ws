@@ -1,0 +1,5 @@
+<launch>
+  <!-- 任务1：红球变换场地 -->
+  <node pkg="image_tran" type="ball_scene_pub_node.py" name="ball_scene_pub" output="screen"/>
+  <node pkg="image_tran" type="ball_scene_sub_node.py" name="ball_scene_sub" output="screen"/>
+</launch>

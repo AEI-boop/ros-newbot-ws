@@ -1,0 +1,4 @@
+<launch>
+  <node pkg="image_tran" type="search_sub_node.py" name="sub_node" output="screen"/>
+  <node pkg="image_tran" type="image_pub_node.py" name="pub_node" output="screen"/>
+</launch>

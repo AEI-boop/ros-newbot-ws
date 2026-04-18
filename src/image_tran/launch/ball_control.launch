@@ -1,0 +1,9 @@
+<launch>
+  <!-- 任务2：红球虚拟遥控控制小海龟 -->
+  <!-- 启动海龟仿真器 -->
+  <node pkg="turtlesim" type="turtlesim_node" name="turtlesim" output="screen"/>
+  <!-- 红球变换场地发布节点 -->
+  <node pkg="image_tran" type="ball_scene_pub_node.py" name="ball_scene_pub" output="screen"/>
+  <!-- 红球检测 + 控制海龟节点 -->
+  <node pkg="image_tran" type="ball_control_node.py" name="ball_control" output="screen"/>
+</launch>
