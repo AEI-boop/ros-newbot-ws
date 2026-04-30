@@ -2,12 +2,13 @@
 # coding=utf-8
 import os
 import rospy
+import rospkg
 import cv2
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge, CvBridgeError
 import numpy as np
 
-root = "/home/starjie/newbot_ws/src/image_tran/image"
+root = os.path.join(rospkg.RosPack().get_path("image_tran"), "image")
 
 def callback(data):
     bridge = CvBridge()

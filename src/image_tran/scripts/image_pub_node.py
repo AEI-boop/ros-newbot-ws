@@ -4,13 +4,14 @@ import rospy
 import sys
 import cv2
 import os
+import rospkg
 import numpy as np
 from sensor_msgs.msg import Image
 import random
 from cv_bridge import CvBridge, CvBridgeError
 
 # 图片路径
-image_path = "/home/starjie/newbot_ws/src/image_tran/image/ball_env.jpeg"
+image_path = os.path.join(rospkg.RosPack().get_path("image_tran"), "image", "ball_env.jpeg")
 
 def pubImage():
     rospy.init_node('pubImage', anonymous=True)
